@@ -1,19 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import 'tailwindcss';
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
+@font-face {
+	font-family: Rubik;
+	font-style: normal;
+	font-optical-sizing: auto;
+	font-weight: 300 900;
+	font-display: swap;
+	src: url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+}
 
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
+@theme {
+	--font-body: Rubik, sans-serif;
+
+	--color-keppel: #44b097;
+	--color-mint: #aff5bf;
+	--color-jungle: #0a1d20;
+	--color-clover: #549454;
+	--color-silver: #d4d4dc;
+	--color-moss: #2e503c;
 }
