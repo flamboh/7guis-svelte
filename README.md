@@ -14,6 +14,6 @@ Completed 2/2
 
 ## CRUD
 
-## Circle Drawer
+## Circles
 
 ## Cells
