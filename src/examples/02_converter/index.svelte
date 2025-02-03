@@ -26,18 +26,13 @@
 			this.#f = 32;
 		}
 	}
-	const T = new Temperature();
+
+	const t = new Temperature();
 </script>
 
-<div class="bg-keppel font-body flex h-screen">
-	<div
-		class="font-body bg-mint m-16 flex w-full flex-col items-center justify-center space-x-2 rounded-4xl"
-	>
-		<h1 class="text-jungle m-6 rounded-sm px-2 text-center text-3xl font-bold">Converter!</h1>
-		<div class="bg-moss text-silver rounded-sm p-4">
-			<input type="number" bind:value={T.c} class="bg-clover w-[10ch] rounded-sm px-2" />
-			Celsius =
-			<input type="number" bind:value={T.f} class="bg-clover w-[10ch] rounded-sm px-2" /> Fahrenheit
-		</div>
-	</div>
+<h1 class="text-jungle m-6 rounded-sm px-2 text-center text-3xl font-bold">Converter!</h1>
+<div class="bg-clover border-jungle rounded-sm border-2 p-4">
+	<input type="number" bind:value={t.c} class="bg-silver w-[10ch] rounded-sm px-2" />
+	Celsius =
+	<input type="number" bind:value={t.f} class="bg-silver w-[10ch] rounded-sm px-2" /> Fahrenheit
 </div>
