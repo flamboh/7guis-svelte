@@ -2,6 +2,7 @@
 	type Options = 'one-way' | 'return';
 
 	let today = new Date().toJSON().slice(0, 10);
+
 	let startDate = $state(today);
 	let returnDate = $state(today);
 
@@ -35,7 +36,7 @@
 	onsubmit={handleSubmit}
 >
 	<select
-		class="bg-silver m-2 w-48 rounded-sm"
+		class="bg-silver m-2 w-48 rounded-sm hover:cursor-pointer"
 		id="flights"
 		bind:value={selected}
 		placeholder={selected}
@@ -45,19 +46,25 @@
 	</select>
 	<label>
 		<span class="hidden">Select the start date:</span>
-		<input class="bg-silver m-1 w-48" type="date" bind:value={startDate} />
+		<input
+			class="bg-silver m-1 w-48 hover:cursor-pointer"
+			type="date"
+			min={today}
+			bind:value={startDate}
+		/>
 	</label>
 	<label>
 		<span class="hidden">Select the return date:</span>
 		<input
-			class="bg-silver m-1 w-48 disabled:brightness-50"
+			class="bg-silver m-1 w-48 hover:cursor-pointer disabled:brightness-50 disabled:hover:cursor-not-allowed"
 			disabled={selected === 'one-way'}
 			type="date"
+			min={today}
 			bind:value={returnDate}
 		/>
 	</label>
 	<button
-		class="bg-silver m-2 w-48 rounded-sm hover:brightness-90 disabled:brightness-50"
+		class="bg-silver m-2 w-48 rounded-sm hover:cursor-pointer hover:brightness-90 disabled:brightness-50 disabled:hover:cursor-not-allowed"
 		disabled={!validateFlight()}
 		type="submit">Book</button
 	>
