@@ -1,4 +1,5 @@
 <script lang="ts">
+	let people = {};
 </script>
 
 <h1 class="text-jungle m-6 rounded-sm px-2 text-center text-3xl font-bold">CRUD!</h1>
