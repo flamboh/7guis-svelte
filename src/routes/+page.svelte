@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { scale } from 'svelte/transition';
+	import { scale, slide } from 'svelte/transition';
 	import src from '$lib/favicon.png';
 
 	const examples = [
@@ -19,7 +19,7 @@
 
 <div class="flex flex-col items-center">
 	{#if ready}
-		<span class="font-body text-4xl" transition:scale|global={{ start: 2.5 }}>
+		<span class="font-body text-4xl" in:scale|global={{ start: 2.5 }}>
 			<a
 				target="_blank"
 				rel="noopener noreferrer"
@@ -28,18 +28,13 @@
 			> in Svelte</span
 		>
 		<a href="https://svelte.dev/" target="_blank" rel="noopener noreferrer">
-			<img
-				{src}
-				alt="Svelte logo"
-				class="p-6 transition-all hover:scale-120"
-				transition:scale|global
-			/>
+			<img {src} alt="Svelte logo" class="p-6 transition-all hover:scale-120" in:scale|global />
 		</a>
 		{#each examples as { label, path }, i}
 			<a
 				href="/examples/{path}"
 				class="text-jungle m-2 rounded-sm p-1 text-3xl font-bold"
-				transition:scale|global
+				in:scale|global={{ delay: i * 50 + 200 }}
 			>
 				{i + 1}: {label}
 			</a>
