@@ -72,6 +72,11 @@
 	}
 
 	$effect(() => {
+		name = people[selected]?.first_name ?? '';
+		surname = people[selected]?.last_name ?? '';
+	});
+
+	$effect(() => {
 		const savedPeople = localStorage.getItem('people');
 		if (savedPeople) {
 			people = JSON.parse(savedPeople);
@@ -89,10 +94,10 @@
 	class="bg-clover border-jungle flex flex-col items-center justify-center rounded-sm border-2 p-2"
 >
 	<form
-		class="grid grid-cols-[284px_192px] grid-rows-[48px_124px_48px] justify-center space-y-2 space-x-2"
+		class="grid grid-cols-[224px_224px] grid-rows-[48px_124px_48px] justify-center space-y-2 space-x-2"
 		onsubmit={handleSubmit}
 	>
-		<div class="row-start-1 w-64 self-center">
+		<div class="row-start-1 w-[95%] self-center">
 			<label class=" flex justify-between">
 				<span>Filter prefix: </span>
 				<input
@@ -102,8 +107,8 @@
 				/>
 			</label>
 		</div>
-		<div class="bg-silver border-jungle row-start-2 w-64 overflow-hidden border-2 p-1">
-			<select size={10} class="h-full w-full" bind:value={selected}>
+		<div class="bg-silver border-jungle row-start-2 w-[95%] overflow-hidden border-2">
+			<select size={10} class="h-full w-full pt-1 pl-1" bind:value={selected}>
 				{#each people as person, i}
 					{#if person.last_name.toLowerCase().startsWith(filter.toLowerCase())}
 						<option value={i}>
@@ -118,7 +123,7 @@
 				<span>Name:</span>
 				<input
 					type="text"
-					class="bg-silver border-jungle ml-4 w-24 rounded-sm border-2"
+					class="bg-silver border-jungle ml-4 w-[50%] rounded-sm border-2"
 					bind:value={name}
 				/>
 			</label>
@@ -126,7 +131,7 @@
 				<span>Surname:</span>
 				<input
 					type="text"
-					class="bg-silver border-jungle ml-4 w-24 rounded-sm border-2"
+					class="bg-silver border-jungle ml-4 w-[50%] rounded-sm border-2"
 					bind:value={surname}
 				/>
 			</label>
