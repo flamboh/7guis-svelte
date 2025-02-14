@@ -33,8 +33,8 @@
 		{#each examples as { label, path }, i}
 			<a
 				href="/examples/{path}"
-				class="text-jungle m-2 rounded-sm p-1 text-3xl font-bold"
-				in:scale|global={{ delay: i * 50 + 200 }}
+				class="text-jungle m-2 rounded-sm p-1 text-3xl font-bold transition-all hover:scale-120 hover:animate-pulse"
+				in:scale|global={{ delay: i * 20 + 50 }}
 			>
 				{i + 1}: {label}
 			</a>

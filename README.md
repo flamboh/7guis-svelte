@@ -16,7 +16,11 @@ Completed 2/2
 
 ## Timer
 
+Completed 2/5
+
 ## CRUD
+
+Completed 2/13
 
 ## Circles
 
