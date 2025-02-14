@@ -1,4 +1,4 @@
-# Completing The 7 Tasks using Svelte, SveltKit, and TailwindCSS
+# Completing The 7 Tasks using Svelte, SvelteKit, TypeScript, and TailwindCSS
 
 Challenge linked [here](https://eugenkiss.github.io/7guis/tasks)
 
