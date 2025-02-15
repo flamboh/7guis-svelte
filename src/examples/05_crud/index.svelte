@@ -102,13 +102,13 @@
 				<span>Filter prefix: </span>
 				<input
 					type="text"
-					class="bg-silver border-jungle w-20 rounded-sm border-2"
+					class="bg-silver border-jungle w-20 rounded-sm border-2 pl-0.5"
 					bind:value={filter}
 				/>
 			</label>
 		</div>
 		<div class="bg-silver border-jungle row-start-2 w-[95%] overflow-hidden border-2">
-			<select size={10} class="h-full w-full pt-1 pl-1" bind:value={selected}>
+			<select size={10} class="h-full w-full pt-0.5 pl-0.5" bind:value={selected}>
 				{#each people as person, i}
 					{#if person.last_name.toLowerCase().startsWith(filter.toLowerCase())}
 						<option value={i}>
@@ -123,7 +123,7 @@
 				<span>Name:</span>
 				<input
 					type="text"
-					class="bg-silver border-jungle ml-4 w-[50%] rounded-sm border-2"
+					class="bg-silver border-jungle ml-4 w-[50%] rounded-sm border-2 pl-0.5"
 					bind:value={name}
 				/>
 			</label>
@@ -131,7 +131,7 @@
 				<span>Surname:</span>
 				<input
 					type="text"
-					class="bg-silver border-jungle ml-4 w-[50%] rounded-sm border-2"
+					class="bg-silver border-jungle ml-4 w-[50%] rounded-sm border-2 pl-0.5"
 					bind:value={surname}
 				/>
 			</label>
