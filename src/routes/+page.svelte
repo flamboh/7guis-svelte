@@ -39,5 +39,12 @@
 				{i + 1}: {label}
 			</a>
 		{/each}
+		<a
+			href="/examples/08_connections"
+			class="text-jungle m-2 rounded-sm p-1 text-3xl font-bold transition-all hover:scale-120 hover:animate-pulse"
+			in:scale|global={{ delay: 7 * 20 + 50 }}
+		>
+			Bonus: Connections
+		</a>
 	{/if}
 </div>

@@ -94,7 +94,7 @@
 	class="bg-clover border-jungle flex flex-col items-center justify-center rounded-sm border-2 p-2"
 >
 	<form
-		class="grid grid-cols-[224px_224px] grid-rows-[48px_124px_48px] justify-center space-y-2 space-x-2"
+		class="grid grid-cols-[168px_168px] grid-rows-[48px_124px_48px] justify-center space-y-2 space-x-2 lg:grid-cols-[224px_224px] lg:grid-rows-[48px_124px_48px]"
 		onsubmit={handleSubmit}
 	>
 		<div class="row-start-1 w-[95%] self-center">
