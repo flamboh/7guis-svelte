@@ -26,19 +26,24 @@
 	]);
 
 	let categories: Array<category> = [
-		{
-			description: 'last.fm top 4 (excluding matt maltese)',
-			items: ['mitski', 'fiona', 'elliot', 'tyler'],
-			color: 'yellow'
-		},
+		// {
+		// 	description: 'last.fm top 4 (excluding matt maltese)',
+		// 	items: ['mitski', 'fiona', 'elliot', 'tyler'],
+		// 	color: 'yellow'
+		// },
 		{
 			description: 'r/battlebuildsurvive intro answers',
 			items: ['they/them', '2005', 'music tech', 'sophia'],
-			color: 'green'
+			color: 'yellow'
 		},
 		{
 			description: 'artists seen live 2024',
 			items: ['poison', 'jane', 'julie', 'origami'],
+			color: 'green'
+		},
+		{
+			description: 'christmas nails features',
+			items: ['airpods', 'clock', 'ladybug', 'button'],
 			color: 'blue'
 		},
 		{
@@ -138,12 +143,7 @@
 	}
 </script>
 
-<svg height="30" width="200" xmlns="http://www.w3.org/2000/svg">
-	<text x="5" y="15" fill="none" class="text-9xl font-bold backdrop-hue-rotate-90">I love SVG!</text
-	>
-</svg>
-
-<h1 class="text-jungle m-6 rounded-sm px-2 text-center text-3xl font-bold">Connections!</h1>
+<h1 class="text-jungle m-6 rounded-sm px-2 text-center text-3xl font-bold">Sophia Connections!</h1>
 
 <div class="mb-2 flex space-x-2">
 	<div
@@ -168,7 +168,9 @@
 			class=" grid grid-cols-[repeat(4,85px)] grid-rows-[repeat(4,60px)] items-center justify-center text-[10px] lg:grid-cols-[repeat(4,150px)] lg:grid-rows-[repeat(4,100px)] lg:text-[16px]"
 		>
 			{#each correctGuesses as correct}
-				<div class={'col-span-4 m-1 rounded-sm p-1 text-center ' + colors[correct.color]}>
+				<div
+					class={'col-span-4 m-1 rounded-sm p-1 py-2 text-center lg:py-6 ' + colors[correct.color]}
+				>
 					<h1 class="font-semibold">
 						{correct.description.toUpperCase()}
 					</h1>
@@ -181,7 +183,7 @@
         -->
 				{#if i >= startPointer}
 					<button
-						class={'bg-silver m-0.5 rounded-sm py-4 text-center font-semibold transition-all disabled:hover:cursor-default lg:m-1 lg:p-5 lg:py-8' +
+						class={'bg-silver m-0.5 rounded-sm py-4 text-center font-semibold transition-all disabled:hover:cursor-default lg:m-1 lg:p-5 lg:py-8 ' +
 							(gridItem.selected ? ' brightness-70 hover:cursor-pointer' : ' ') +
 							(numSelected < 4 ? ' hover:cursor-pointer' : '')}
 						onclick={(e) => select(e, gridItem)}
