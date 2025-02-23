@@ -143,7 +143,9 @@
 	}
 </script>
 
-<h1 class="text-jungle m-6 rounded-sm px-2 text-center text-3xl font-bold">get outta here bro</h1>
+<h1 class="text-jungle m-6 rounded-sm px-2 text-center text-3xl font-bold">
+	get outta here bro leave me be
+</h1>
 <!-- 
 <div class="mb-2 flex space-x-2">
 	<div
