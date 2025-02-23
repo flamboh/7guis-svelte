@@ -143,8 +143,8 @@
 	}
 </script>
 
-<h1 class="text-jungle m-6 rounded-sm px-2 text-center text-3xl font-bold">Sophia Connections!</h1>
-
+<h1 class="text-jungle m-6 rounded-sm px-2 text-center text-3xl font-bold">get outta here bro</h1>
+<!-- 
 <div class="mb-2 flex space-x-2">
 	<div
 		class={'my-2 rounded-full bg-white transition-all' + (guesses > 3 ? ' size-0' : ' size-6')}
@@ -178,9 +178,9 @@
 				</div>
 			{/each}
 			{#each gridCategories as gridItem, i}
-				<!-- if the index is greater than a start pointer 
+				 if the index is greater than a start pointer 
         display guesses
-        -->
+        
 				{#if i >= startPointer}
 					<button
 						class={'bg-silver m-0.5 rounded-sm py-4 text-center font-semibold transition-all disabled:hover:cursor-default lg:m-1 lg:p-5 lg:py-8 ' +
@@ -236,3 +236,4 @@
 		{'You lost :(('}
 	</h1>
 {/if}
+ -->
